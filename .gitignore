@@ -1,0 +1,30 @@
+# Loại bỏ thư mục node_modules
+node_modules/
+
+# Loại bỏ file .env
+.env
+
+# Loại bỏ các file log
+*.log
+
+# Loại bỏ thư mục build
+build/
+
+# Loại bỏ thư mục .DS_Store
+.DS_Store
+
+# Loại bỏ thư mục dist
+dist/
+
+# Loại bỏ các file cache
+.cache/
+
+# Loại bỏ các file IDE/Editor
+.vscode/
+.idea/
+
+# Loại bỏ các file package-lock.json
+package-lock.json
+
+# Loại bỏ các file yarn.lock
+yarn.lock
