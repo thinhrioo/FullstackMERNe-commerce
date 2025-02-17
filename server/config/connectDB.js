@@ -1,17 +1,19 @@
-import mongoose from "mongoose"
-import dotenv from "dotenv"
+import mongoose from "mongoose";
+import dotenv from 'dotenv'
+dotenv.config()
 
-if(process.env.MONGODB_URI){
+if(!process.env.MONGODB_URI){
     throw new Error(
-        "Please  provide a Mongoose URI in the .env file"
+        "Please provide MONGODB_URI in the .env file"
     )
 }
+
 async function connectDB(){
-    try{
+    try {
         await mongoose.connect(process.env.MONGODB_URI)
-        console.log("MongoDB Connected...")
-    }catch(e){
-        console.error("Mongodb connection error",e)
+        console.log("connect DB")
+    } catch (error) {
+        console.log("Mongodb connect error",error)
         process.exit(1)
     }
 }
