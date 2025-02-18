@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema({
     userId : {
@@ -47,4 +47,4 @@ const orderSchema = new mongoose.Schema({
 })
 const OderModel = mongoose.model("order", orderSchema)
 
-export default OderModel
+module.exports = OderModel
