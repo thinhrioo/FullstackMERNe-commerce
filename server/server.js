@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const httpErrors = require('http-errors');
 require('dotenv').config();
 const Db = require('./model');
-
+const userRoute = require('./routes/user.router');
 //khoi taoj web server bang express
 const app = express();
 
@@ -26,7 +26,7 @@ app.use(async (err, req, res, next) => {
     res.send({error: {"status": err.status, "message": err.message}});
 })
 // app.use('/customer', customerRoute);
-
+app.use('/api/user', userRoute);
 
 const HOST = process.env.HOST_NAME || 'localhost';
 const PORT = process.env.PORT || 9999;

@@ -43,6 +43,6 @@ const verifyEmailTemplate = (name, url) => {
         </body>
         </html>
     `;
-}
+};
 
 module.exports = verifyEmailTemplate;
