@@ -8,4 +8,5 @@ const generateAccessToken = (user) => {
     );
 };
 
+
 module.exports = generateAccessToken
